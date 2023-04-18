@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plantilla para implementar claves -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="plantillaClave">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="elementoDependiente"/>
+        <xs:element ref="elementoIndependiente"/>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key name="relacion">
+      <xs:selector xpath="elementoIndependiente"/>
+      <xs:field xpath="@atributoIndependiente_esKey"/>
+    </xs:key>
+    <xs:keyref name="referenciaClave" refer="relacion">
+      <xs:selector xpath="elementoDependiente"/>
+      <xs:field xpath="@atributoDependiente_esKeyref"/>
+    </xs:keyref>
+  </xs:element>
+  
+  <xs:element name="elementoDependiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombreDependiente" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="atributoDependiente_esKeyref" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="elementoIndependiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombreIndependiente" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="atributoIndependiente_esKey" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plantilla para implementar claves -->
+<ciudadesPaises xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:noNamespaceSchemaLocation="ciudadesPaises.xsd">
+  <ciudad pais="ES">
+    <nombreCiudad>Madrid</nombreCiudad>
+  </ciudad>
+  <ciudad pais="JP">
+    <nombreCiudad>Tokio</nombreCiudad>
+  </ciudad>
+
+  <pais codPais="ES">
+    <nombrePais>España</nombrePais>
+  </pais>
+  <pais codPais="JP">
+    <nombrePais>Japón</nombrePais>
+  </pais>
+  
+<!-- el siguiente elementoIndependiente puede existir sin ser referenciado -->  
+  <pais codPais="PT">
+    <nombrePais>Portugal</nombrePais>
+  </pais>
+ 
+</ciudadesPaises>

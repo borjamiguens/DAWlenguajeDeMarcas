@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Plantilla para implementar claves -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ciudadesPaises">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="ciudad"/>
+        <xs:element ref="pais"/>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key name="relacion">
+      <xs:selector xpath="pais"/>
+      <xs:field xpath="@codPais"/>
+    </xs:key>
+    <xs:keyref name="referenciaClave" refer="relacion">
+      <xs:selector xpath="ciudad"/>
+      <xs:field xpath="@pais"/>
+    </xs:keyref>
+  </xs:element>
+  
+  <xs:element name="ciudad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombreCiudad" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="pais" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="pais">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombrePais" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="codPais" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

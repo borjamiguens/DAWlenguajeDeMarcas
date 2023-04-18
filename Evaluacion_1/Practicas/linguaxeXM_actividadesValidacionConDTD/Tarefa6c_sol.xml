@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE material SYSTEM "Tarefa6c.dtd">
+<material>
+  <libro ISBN="X9-8998">
+    <titulo>Inverno na Pereira</titulo>
+    <editorial>Toxo verde</editorial>
+    <autor>Xurxo Cancelas Brión</autor>
+    <ano>2008</ano>
+  </libro> 
+</material>
+
+

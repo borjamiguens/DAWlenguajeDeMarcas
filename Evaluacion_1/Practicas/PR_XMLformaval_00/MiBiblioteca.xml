@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca>
+<libro>
+  <titulo>A praia dos afogados</titulo>
+  <autor>Domingo Vilar</autor>
+  <editorial>Galaxia</editorial>
+  <fechaPublicacion>2009</fechaPublicacion>
+  <isbn>5458789</isbn>
+</libro>
+<libro>
+  <titulo>El útimo barco</titulo>
+  <autor>Domingo Vilar</autor>
+  <editorial>Galaxia</editorial>
+  <fechaPublicacion>2009</fechaPublicacion>
+  <isbn>54777</isbn>
+</libro>
+<libro>
+  <titulo>El bosque de los cuatro vienteos</titulo>
+  <autor>María Oruña</autor>
+  <editorial>Galaxia</editorial>
+  <fechaPublicacion>2021</fechaPublicacion>
+  <isbn>544788</isbn>
+</libro>
+</biblioteca>

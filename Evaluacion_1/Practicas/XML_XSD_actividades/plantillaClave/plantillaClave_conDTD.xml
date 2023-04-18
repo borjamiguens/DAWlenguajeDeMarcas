@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Plantilla para implementar claves, con DTD -->
+<!DOCTYPE plantillaClave [
+<!ELEMENT plantillaClave (elementoDependiente | elementoIndependiente)*>
+<!ELEMENT elementoDependiente (nombreDependiente)>
+<!ELEMENT nombreDependiente (#PCDATA)>
+<!ATTLIST elementoDependiente atributoDependiente_esKeyref IDREF #REQUIRED>
+<!ELEMENT elementoIndependiente (nombreIndependiente)>
+<!ELEMENT nombreIndependiente (#PCDATA)>
+<!ATTLIST elementoIndependiente atributoIndependiente_esKey ID #REQUIRED>
+]>
+<plantillaClave>
+  <elementoDependiente atributoDependiente_esKeyref="ES">
+    <nombreDependiente>Madrid</nombreDependiente>
+  </elementoDependiente>
+  <elementoDependiente atributoDependiente_esKeyref="JP">
+    <nombreDependiente>Tokio</nombreDependiente>
+  </elementoDependiente>
+  <elementoIndependiente atributoIndependiente_esKey="ES">
+    <nombreIndependiente>España</nombreIndependiente>
+  </elementoIndependiente>
+  <elementoIndependiente atributoIndependiente_esKey="JP">
+    <nombreIndependiente>Japón</nombreIndependiente>
+  </elementoIndependiente>
+  <!-- el siguiente elementoIndependiente puede existir sin ser referenciado -->
+  <elementoIndependiente atributoIndependiente_esKey="PT">
+    <nombreIndependiente>Portugal</nombreIndependiente>
+  </elementoIndependiente>
+</plantillaClave>
